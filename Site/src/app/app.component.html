@@ -18,7 +18,7 @@
           Catalogos<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
           <a [routerLink]="['/pacientes']" class="dropdown-item waves-light" mdbRippleRadius>Pacientes</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Médico</a>
+          <a [routerLink]="['/medicos']" class="dropdown-item waves-light" mdbRippleRadius>Médico</a>
           <a class="dropdown-item waves-light" mdbRippleRadius href="#">Enfermer@s</a>
           <a class="dropdown-item waves-light" mdbRippleRadius href="#">Salas o Cuartos</a>
           <a class="dropdown-item waves-light" mdbRippleRadius href="#">Camas</a>
@@ -58,8 +58,8 @@
 <!--/.Navbar-->
 
 <main class="container">
-  <app-medicos></app-medicos>
-  <!--<router-outlet></router-outlet>-->
+  <!--<app-medicos></app-medicos>-->
+  <router-outlet></router-outlet>
 </main>
 
 
