@@ -64,5 +64,54 @@ namespace UnidadControl.Catalogos
 
         #endregion
 
+        #region "Medico"
+
+        public List<uni_tratanteDTO> getMedicos()
+        {
+            List<uni_tratanteDTO> resultado = new List<uni_tratanteDTO>();
+            resultado = AutoMapper.Mapper.Map<List<uni_tratanteDTO>>(context.uni_tratantes.OrderBy(f => f.num_adscripcion).ToList());
+            return resultado;
+        }
+
+        public uni_tratanteDTO getMedicoById(string num_Adscripcion)
+        {
+            uni_tratanteDTO resultado = new uni_tratanteDTO();
+            resultado = AutoMapper.Mapper.Map<uni_tratanteDTO>(context.uni_tratantes.FirstOrDefault(f => f.num_adscripcion == num_Adscripcion));
+            return resultado;
+        }
+
+        public uni_tratanteDTO setMedico(uni_tratanteDTO _MedicoDTO)
+        {
+            try
+            {
+                var medico = Mapper.Map<uni_tratante>(_MedicoDTO);
+                context.uni_tratantes.Add(medico);
+                context.SaveChanges();
+                return AutoMapper.Mapper.Map<uni_tratanteDTO>(medico);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        public uni_tratanteDTO updateMedico(uni_tratanteDTO _MedicoDTO)
+        {
+            var newMedico = Mapper.Map<uni_tratante>(_MedicoDTO);
+            var oldMedico = context.uni_tratantes.FirstOrDefault(f => f.id == newMedico.id);
+
+            oldMedico.cedula_prof = newMedico.cedula_prof;
+            oldMedico.especialidad = newMedico.especialidad;
+            oldMedico.Materno = newMedico.Materno;
+            oldMedico.Nombre = newMedico.Nombre;
+            oldMedico.Paterno = newMedico.Paterno;
+            context.SaveChanges();
+            return _MedicoDTO;
+        }
+
+
+        #endregion
+
+
     }
 }
