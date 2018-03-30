@@ -1,0 +1,64 @@
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+  <!-- Navbar brand -->
+  <logo><a class="navbar-brand" href="#">SAI-Unidosis</a></logo>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbRippleRadius>Inicio<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          Catalogos<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a [routerLink]="['/pacientes']" class="dropdown-item waves-light" mdbRippleRadius>Pacientes</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Médico</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Enfermer@s</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Salas o Cuartos</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Camas</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbRippleRadius>Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbRippleRadius>Pricing</a>
+      </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          Basic dropdown<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Action</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Another action</a>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Something else here</a>
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Separated link</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <!-- Search form -->
+    <form class="form-inline  waves-light" mdbRippleRadius>
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    </form>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
+
+

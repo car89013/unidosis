@@ -1,0 +1,17 @@
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\UnidadControl.dll.config
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\UnidadControl.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\UnidadControl.pdb
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\AutoMapper.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\EntityFramework.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\ModeloEntidad.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\Newtonsoft.Json.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\ModeloEntidad.pdb
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\ModeloEntidad.dll.config
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\AutoMapper.xml
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\EntityFramework.xml
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\bin\Release\Newtonsoft.Json.xml
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\obj\Release\UnidadControl.csprojResolveAssemblyReference.cache
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\obj\Release\UnidadControl.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\UnidadControl\obj\Release\UnidadControl.pdb

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4F336A34-AB5F-4F29-8DD7-EEFFDDF1864E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModeloEntidad</RootNamespace>
+    <AssemblyName>ModeloEntidad</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\UnidosisContext.cs" />
+    <Compile Include="DAL\UnidosisInitializer.cs" />
+    <Compile Include="Entidades\Catalogos\uni_asignacion_cama.cs" />
+    <Compile Include="Entidades\Catalogos\uni_cama.cs" />
+    <Compile Include="Entidades\Catalogos\uni_enfermera.cs" />
+    <Compile Include="Entidades\Catalogos\uni_paciente.cs" />
+    <Compile Include="Entidades\Catalogos\uni_sala.cs" />
+    <Compile Include="Entidades\Catalogos\uni_tratante.cs" />
+    <Compile Include="Entidades\Movimientos\uni_aplicacion_m.cs" />
+    <Compile Include="Entidades\Movimientos\uni_aplicacion_d.cs" />
+    <Compile Include="Entidades\Movimientos\uni_ingreso.cs" />
+    <Compile Include="Entidades\Movimientos\uni_inventario.cs" />
+    <Compile Include="Entidades\Movimientos\uni_prescripcion_d.cs" />
+    <Compile Include="Entidades\Movimientos\uni_prescripcion_m.cs" />
+    <Compile Include="Entidades\Movimientos\uni_reabasto_farmacia_d.cs" />
+    <Compile Include="Entidades\Movimientos\uni_reabasto_farmacia_m.cs" />
+    <Compile Include="Entidades\Movimientos\uni_reabasto_servicio.cs" />
+    <Compile Include="Migrations\201803280028254_Unidosis.cs" />
+    <Compile Include="Migrations\201803280028254_Unidosis.Designer.cs">
+      <DependentUpon>201803280028254_Unidosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803280028254_Unidosis.resx">
+      <DependentUpon>201803280028254_Unidosis.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

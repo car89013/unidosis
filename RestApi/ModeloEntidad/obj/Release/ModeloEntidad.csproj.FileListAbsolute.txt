@@ -1,0 +1,12 @@
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Release\ModeloEntidad.dll.config
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Release\ModeloEntidad.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Release\ModeloEntidad.pdb
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Release\EntityFramework.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Release\EntityFramework.xml
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.csprojResolveAssemblyReference.cache
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.Migrations.Unidosis.resources
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.csproj.GenerateResource.Cache
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.dll
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.pdb
