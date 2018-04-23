@@ -7,6 +7,7 @@ C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Debug\Ent
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Debug\ModeloEntidad.dll
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Debug\ModeloEntidad.pdb
-C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Debug\ModeloEntidad.csprojResolveAssemblyReference.cache
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Debug\ModeloEntidad.Migrations.Unidosis.resources
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Debug\ModeloEntidad.csproj.GenerateResource.Cache
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Debug\ModeloEntidad.csprojResolveAssemblyReference.cache
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Debug\ModeloEntidad.Migrations.Unidosis1.resources

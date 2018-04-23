@@ -10,3 +10,4 @@ C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\M
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.csproj.GenerateResource.Cache
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.dll
 C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.pdb
+C:\Users\SIDECC\Documents\Proyectos\unidosis\RestApi\ModeloEntidad\obj\Release\ModeloEntidad.Migrations.Unidosis1.resources

@@ -20,6 +20,6 @@ export class MedicosService {
   }
 
   public putMedico(medico: Medicos) {
-    return this.http.put('http://172.16.1.71/Unidosis/api/Meidcos', JSON.stringify(medico), { headers: this.headers}).toPromise();
+    return this.http.put('http://172.16.1.71/Unidosis/api/Medicos', JSON.stringify(medico), { headers: this.headers}).toPromise();
   }
 }

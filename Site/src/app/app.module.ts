@@ -3,25 +3,35 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
-import { PacientesComponent } from './pacientes/pacientes.component';
-import { MedicosComponent } from './medicos/medicos.component';
+import {PacientesComponent} from './pacientes/pacientes.component';
+import {MedicosComponent} from './medicos/medicos.component';
 import {AgGridModule} from 'ag-grid-angular';
 import {MedicosService} from './services/medicos.service';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {EnfermerasComponent} from './enfermeras/enfermeras.component';
+import {PacientesService} from './services/pacientes.service';
+import {EnfermerasService} from './services/enfermeras.service';
+import { SalasComponent } from './salas/salas.component';
+import {SalasService} from './services/salas.service';
 
 const appRouter: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'  },
-  { path: 'pacientes', component: PacientesComponent}
+  { path: 'pacientes', component: PacientesComponent},
+  { path: 'medicos', component: MedicosComponent},
+  { path: 'enfermeras', component: EnfermerasComponent},
+  { path: 'salas', component: SalasComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     PacientesComponent,
-    MedicosComponent
+    MedicosComponent,
+    EnfermerasComponent,
+    SalasComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +42,7 @@ const appRouter: Routes = [
     RouterModule.forRoot(appRouter),
     AgGridModule.withComponents([]),
   ],
-  providers: [MedicosService],
+  providers: [MedicosService, PacientesService, EnfermerasService, SalasService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

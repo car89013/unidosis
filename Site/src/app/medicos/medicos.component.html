@@ -39,7 +39,7 @@
         <div class="col-md-3">
           <div class="md-form">
             <label for="matricula">Matricula</label>
-            <input class="form-control-sm" type="text" id="matricula" name="matricula" [(ngModel)]="medicos.num_adscripcion" mdbActive [disabled]="editando">
+            <input class="form-control-sm" type="text" id="matricula" name="matricula" [(ngModel)]="medico.num_adscripcion" mdbActive [disabled]="editando">
           </div>
         </div>
       </div>
@@ -47,19 +47,19 @@
         <div class="col-md-4">
           <div class="md-form">
             <label for="nombre">Nombre</label>
-            <input class="form-control-sm" type="text" id="nombre" name="nombre" [(ngModel)]="medicos.Nombre" mdbActive="">
+            <input class="form-control-sm" type="text" id="nombre" name="nombre" [(ngModel)]="medico.Nombre" mdbActive="">
           </div>
         </div>
         <div class="col-md-4">
           <div class="md-form">
             <label for="apellidoPaterno">Apellido Paterno</label>
-            <input class="form-control-sm" type="text" id="apellidoPaterno" name="apellidoPaterno" [(ngModel)]="medicos.Paterno" mdbActive="">
+            <input class="form-control-sm" type="text" id="apellidoPaterno" name="apellidoPaterno" [(ngModel)]="medico.Paterno" mdbActive="">
           </div>
         </div>
         <div class="col-md-4">
           <div class="md-form">
             <label for="apellicoMaterno">Apellido Materno</label>
-            <input class="form-control-sm" type="text" id="apellicoMaterno" name="apellicoMaterno" [(ngModel)]="medicos.Materno" mdbActive="">
+            <input class="form-control-sm" type="text" id="apellicoMaterno" name="apellicoMaterno" [(ngModel)]="medico.Materno" mdbActive="">
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
         <div class="col-md-3">
           <div class="md-form">
             <label for="cedula">Cedula Profesional</label>
-            <input class="form-control-sm" type="text" id="cedula" name="cedula" [(ngModel)]="medicos.cedula_prof" mdbActive>
+            <input class="form-control-sm" type="text" id="cedula" name="cedula" [(ngModel)]="medico.cedula_prof" mdbActive>
           </div>
         </div>
       </div>
@@ -75,7 +75,7 @@
         <div class="col-md-3">
           <div class="md-form">
             <label for="especialidad">Especialidad</label>
-            <input class="form-control-sm" type="text" id="especialidad" name="especialidad" [(ngModel)]="medicos.especialidad" mdbActive>
+            <input class="form-control-sm" type="text" id="especialidad" name="especialidad" [(ngModel)]="medico.especialidad" mdbActive>
           </div>
         </div>
       </div>
