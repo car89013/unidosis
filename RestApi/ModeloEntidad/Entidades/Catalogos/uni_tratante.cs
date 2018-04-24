@@ -52,5 +52,6 @@ namespace ModeloEntidad.Entidades.Catalogos
         /// </summary>
         [StringLength(50)]
         public string especialidad { get; set; }
+
     }
 }
