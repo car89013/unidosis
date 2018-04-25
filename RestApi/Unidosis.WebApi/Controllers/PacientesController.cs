@@ -45,9 +45,9 @@ namespace Unidosis.WebApi.Controllers
             {
                 Paciente = ucCatalogos.setPaciente(_Paciente);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex.Message);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "No se ha especificado un paciente valido");
             }
 
             return Request.CreateResponse(HttpStatusCode.OK, Paciente);

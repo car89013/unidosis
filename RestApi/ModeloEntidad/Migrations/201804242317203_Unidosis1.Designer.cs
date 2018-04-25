@@ -13,7 +13,7 @@ namespace ModeloEntidad.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201804042153251_Unidosis1"; }
+            get { return "201804242317203_Unidosis1"; }
         }
         
         string IMigrationMetadata.Source

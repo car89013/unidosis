@@ -23,16 +23,5 @@ namespace UnidadControl.Catalogos.DTOs
         /// </summary>
         virtual public List<uni_asignacion_camaDTO> camas { get; set; }
 
-        public int numeroCamas
-        {
-            get
-            {
-                if (camas != null)
-                    return camas.Count();
-                else
-                    return 0;
-            }
-        }
-
     }
 }

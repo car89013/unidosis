@@ -33,9 +33,9 @@ namespace Unidosis.WebApi.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, sala);
         }
 
-        public HttpResponseMessage Get(int id,bool disponibles)
+        public HttpResponseMessage Get(int id, bool disponibles)
         {
-            List<uni_camaDTO> camas = ucCatalogos.getCamasById(id,disponibles);
+            List<uni_camaDTO> camas = ucCatalogos.getCamasById(id, disponibles);
             if (camas == null)
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, "No se encontro la sala");
             return Request.CreateResponse(HttpStatusCode.OK, camas);

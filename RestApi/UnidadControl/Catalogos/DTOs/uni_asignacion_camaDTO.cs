@@ -11,7 +11,7 @@ namespace UnidadControl.Catalogos.DTOs
     {
         public int id { get; set; }
 
-        //virtual public uni_salaDTO sala { get; set; }
+        virtual public uni_salaDTO sala { get; set; }
 
         public int fk_sala { get; set; }
 
@@ -19,7 +19,9 @@ namespace UnidadControl.Catalogos.DTOs
 
         public int fk_cama { get; set; }
 
-        virtual public List<uni_ingresoDTO> ingresos { get; set; }
+        virtual public uni_ingresoDTO ingreso { get; set; }
+
+        public int fk_ingreso { get; set; }
 
     }
 }

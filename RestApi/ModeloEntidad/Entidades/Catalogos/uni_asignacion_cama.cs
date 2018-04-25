@@ -24,7 +24,9 @@ namespace ModeloEntidad.Entidades.Catalogos
 
         public int fk_cama { get; set; }
 
-        virtual public List<uni_ingreso> ingresos { get; set; }
+        [ForeignKey("fk_ingreso")]
+        virtual public uni_ingreso ingreso { get; set; }
 
+        public int fk_ingreso { get; set; }
     }
 }
