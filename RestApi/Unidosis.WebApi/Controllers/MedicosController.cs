@@ -45,9 +45,9 @@ namespace Unidosis.WebApi.Controllers
             {
                 Medico = ucCatalogos.setMedico(_Medico);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest,ex.Message);
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "No se ha especificado un medico valido");
             }
 
             return Request.CreateResponse(HttpStatusCode.OK, Medico);
