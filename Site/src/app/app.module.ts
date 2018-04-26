@@ -16,14 +16,18 @@ import {PacientesService} from './services/pacientes.service';
 import {EnfermerasService} from './services/enfermeras.service';
 import { SalasComponent } from './salas/salas.component';
 import {SalasService} from './services/salas.service';
+import { PrescipcionComponent } from './prescipcion/prescipcion.component';
+import {MatButtonModule, MatTabsModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRouter: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'  },
   { path: 'pacientes', component: PacientesComponent},
   { path: 'medicos', component: MedicosComponent},
   { path: 'enfermeras', component: EnfermerasComponent},
-  { path: 'salas', component: SalasComponent}
-]
+  { path: 'salas', component: SalasComponent},
+  { path: 'prescripcion', component: PrescipcionComponent},
+];
 
 @NgModule({
   declarations: [
@@ -31,7 +35,8 @@ const appRouter: Routes = [
     PacientesComponent,
     MedicosComponent,
     EnfermerasComponent,
-    SalasComponent
+    SalasComponent,
+    PrescipcionComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +46,9 @@ const appRouter: Routes = [
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(appRouter),
     AgGridModule.withComponents([]),
+    BrowserAnimationsModule,
+    MatTabsModule,
+    MatButtonModule,
   ],
   providers: [MedicosService, PacientesService, EnfermerasService, SalasService],
   bootstrap: [AppComponent],

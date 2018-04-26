@@ -23,26 +23,37 @@
           <a [routerLink]="['/salas']" class="dropdown-item waves-light" mdbRippleRadius>Salas o Cuartos</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbRippleRadius>Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbRippleRadius>Pricing</a>
-      </li>
-
-      <!-- Dropdown -->
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
-          Basic dropdown<span class="caret"></span></a>
+          Gestión de Piso<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Action</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Another action</a>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Something else here</a>
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Ingresos - "Carlos"</a>
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Egresos - "Carlos"</a>
           <div class="divider dropdown-divider"></div>
-          <a class="dropdown-item waves-light" mdbRippleRadius href="#">Separated link</a>
+          <a [routerLink]="['/prescripcion']" class="dropdown-item waves-light" mdbRippleRadius>Atención Pacientes</a>
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Aplicacion</a>
+          <div class="divider dropdown-divider"></div>
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Solicitudes Extraordinarias de Medicaentos</a>
         </div>
       </li>
-
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          Consultas<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Reabasto Servicio</a>
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Reabasto Farmacia</a>
+          <div class="divider dropdown-divider"></div>
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Inventarios</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbRippleRadius type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+          Procesos<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Recibo de Productos de Farmacia</a>
+          <a [routerLink]="['/']" class="dropdown-item waves-light" mdbRippleRadius>Devolución de Prodcutos a Farmaica</a>
+        </div>
+      </li>
     </ul>
     <!-- Links -->
 
@@ -58,6 +69,7 @@
 
 <main class="container">
   <!--<app-medicos></app-medicos>-->
+  <br>
   <router-outlet></router-outlet>
 </main>
 
