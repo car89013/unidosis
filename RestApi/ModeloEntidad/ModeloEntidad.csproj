@@ -58,6 +58,7 @@
     <Compile Include="Entidades\Catalogos\uni_tratante.cs" />
     <Compile Include="Entidades\Movimientos\uni_aplicacion_m.cs" />
     <Compile Include="Entidades\Movimientos\uni_aplicacion_d.cs" />
+    <Compile Include="Entidades\Movimientos\uni_bitacora.cs" />
     <Compile Include="Entidades\Movimientos\uni_ingreso.cs" />
     <Compile Include="Entidades\Movimientos\uni_inventario.cs" />
     <Compile Include="Entidades\Movimientos\uni_prescripcion_d.cs" />
@@ -73,6 +74,22 @@
     <Compile Include="Migrations\201804242317203_Unidosis1.Designer.cs">
       <DependentUpon>201804242317203_Unidosis1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804261652161_Unidosis2.cs" />
+    <Compile Include="Migrations\201804261652161_Unidosis2.Designer.cs">
+      <DependentUpon>201804261652161_Unidosis2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804261921534_Unidosis3.cs" />
+    <Compile Include="Migrations\201804261921534_Unidosis3.Designer.cs">
+      <DependentUpon>201804261921534_Unidosis3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804262005499_Unidosis4.cs" />
+    <Compile Include="Migrations\201804262005499_Unidosis4.Designer.cs">
+      <DependentUpon>201804262005499_Unidosis4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201804262007193_Unidosis5.cs" />
+    <Compile Include="Migrations\201804262007193_Unidosis5.Designer.cs">
+      <DependentUpon>201804262007193_Unidosis5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -86,6 +103,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804242317203_Unidosis1.resx">
       <DependentUpon>201804242317203_Unidosis1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804261652161_Unidosis2.resx">
+      <DependentUpon>201804261652161_Unidosis2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804261921534_Unidosis3.resx">
+      <DependentUpon>201804261921534_Unidosis3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804262005499_Unidosis4.resx">
+      <DependentUpon>201804262005499_Unidosis4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804262007193_Unidosis5.resx">
+      <DependentUpon>201804262007193_Unidosis5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

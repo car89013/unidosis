@@ -34,6 +34,8 @@ namespace UnidadControl
                 cfg.CreateMap<uni_tratanteDTO, uni_tratante>();
                 cfg.CreateMap<uni_ingreso, uni_ingresoDTO>();
                 cfg.CreateMap<uni_ingresoDTO, uni_ingreso>();
+                cfg.CreateMap<uni_bitacora, uni_bitacoraDTO>();
+                cfg.CreateMap<uni_bitacoraDTO, uni_bitacora>();
             });
         }
 

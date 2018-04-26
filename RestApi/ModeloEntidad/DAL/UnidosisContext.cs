@@ -32,6 +32,7 @@ namespace ModeloEntidad.DAL
         public DbSet<uni_prescripcion_d> uni_prescripciones_d { get; set; }
         public DbSet<uni_reabasto_servicio> uni_reabasto_servicios { get; set; }
         public DbSet<uni_inventario> uni_inventarios { get; set; }
+        public DbSet<uni_bitacora> uni_bitacoras { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

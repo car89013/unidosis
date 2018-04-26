@@ -21,18 +21,18 @@ namespace UnidadControl.Catalogos.DTOs
         /// <summary>
         /// Lista de camas asignadas a la sala o cuarto.
         /// </summary>
-        virtual public List<uni_asignacion_camaDTO> camas { get; set; }
+        //public List<uni_asignacion_camaDTO> camas { get; set; }
 
-        public int numeroCamas
-        {
-            get
-            {
-                if (camas != null)
-                    return camas.Count();
-                else
-                    return 0;
-            }
-        }
+        //public int numeroCamas
+        //{
+        //    get
+        //    {
+        //        if (camas != null)
+        //            return camas.Count();
+        //        else
+        //            return 0;
+        //    }
+        //}
 
     }
 }

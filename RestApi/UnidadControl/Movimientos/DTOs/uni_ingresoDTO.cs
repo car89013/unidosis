@@ -32,5 +32,11 @@ namespace UnidadControl.Movimientos.DTOs
 
         //virtual public List<uni_prescripcion_mDTO> prescripciones { get; set; }
 
+        virtual public List<uni_bitacoraDTO> bitacora { get; set; }
+
+        public string motivoIngreso { get; set; }
+
+        virtual public uni_asignacion_camaDTO asignacion { get; set; }
+
     }
 }
