@@ -19,6 +19,7 @@ import {SalasService} from './services/salas.service';
 import { PrescipcionComponent } from './prescipcion/prescipcion.component';
 import {MatButtonModule, MatTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {IngresosService} from './services/ingresos.service';
 
 const appRouter: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'  },
@@ -50,7 +51,8 @@ const appRouter: Routes = [
     MatTabsModule,
     MatButtonModule,
   ],
-  providers: [MedicosService, PacientesService, EnfermerasService, SalasService],
+  providers: [MedicosService, PacientesService, EnfermerasService, SalasService,
+  IngresosService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

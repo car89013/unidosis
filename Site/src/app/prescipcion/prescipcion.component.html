@@ -8,7 +8,7 @@
         <div class="md-form d-inline-flex">
           <label for="brazalete">Brazalete:</label>
           <input class="form-control-sm" type="text" id="brazalete" name="brazalete" [(ngModel)]="brazalete" mdbActive [disabled]="editando">
-          <button type="button" class="btn btn-elegant btn-sm" mdbRippleRadius>
+          <button type="button" class="btn btn-elegant btn-sm" mdbRippleRadius (click)="findbrazalete()">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </div>
@@ -19,26 +19,26 @@
         <label>Num. Afiliación:</label>
       </div>
       <div class="col-md-6 alert-right" >
-        <label>234998934</label>
+        {{ infoPaciente.paciente.Afiliacion }}
       </div>
     </div><div class="row">
       <div class="col-md-1 blue-grey-text font-weight-light" >
         <label>Paterno:</label>
       </div>
       <div class="col-md-2">
-        <label>DUTHOY</label>
+        {{ infoPaciente.paciente.Paterno }}
       </div>
       <div class="col-md-1 blue-grey-text font-weight-light" >
         <label>Materno:</label>
       </div>
       <div class="col-md-2">
-        <label>González</label>
+        {{ infoPaciente.paciente.Materno }}
       </div>
       <div class="col-md-1 blue-grey-text font-weight-light" >
         <label>Nombre:</label>
       </div>
       <div class="col-md-2">
-        <label>Alberto Enrique</label>
+        {{ infoPaciente.paciente.Nombre }}
       </div>
     </div>
     <div class="row">
@@ -46,7 +46,7 @@
         <label>Fecha Nacimiento:</label>
       </div>
       <div class="col-md-5">
-        1996-01-25
+        {{ infoPaciente.paciente.fecha_nacimiento | date }}
       </div>
     </div>
     <hr>
