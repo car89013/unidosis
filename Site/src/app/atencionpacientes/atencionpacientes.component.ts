@@ -1,31 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import {GridOptions} from 'ag-grid';
 import {IngresosService} from '../services/ingresos.service';
-import {AtencionPacientes} from '../models/atencion-pacientes';
 import {BitacoraPacientes} from '../models/bitacora-pacientes';
 import {Pacientes} from '../models/pacientes';
 import {Asignacioncamas} from '../models/asignacioncamas';
+import {Ingresos} from '../models/ingresos';
+import {Salas} from '../models/salas';
+import {Camas} from '../models/camas';
 
 @Component({
   selector: 'app-prescipcion',
-  templateUrl: './prescipcion.component.html',
-  styleUrls: ['./prescipcion.component.scss']
+  templateUrl: './atencionpacientes.component.html',
+  styleUrls: ['./atencionpacientes.component.scss']
 })
-export class PrescipcionComponent implements OnInit {
+export class AtencionPacientesComponent implements OnInit {
 
   bitacroraGrid: GridOptions;
   editando: true;
   brazalete: string;
-  infoPaciente: AtencionPacientes;
+  infoPaciente: Ingresos;
 
   constructor(private svratencion: IngresosService) {
 
     /* Inicializando infomraicón del paciente */
-    this.infoPaciente = new AtencionPacientes();
+    this.infoPaciente = new Ingresos();
     this.infoPaciente.paciente = new Pacientes();
     this.infoPaciente.bitacora = [];
     this.infoPaciente.asignacion = new Asignacioncamas();
-
+    this.infoPaciente.asignacion.sala = new Salas();
+    this.infoPaciente.asignacion.cama = new Camas();
   }
 
   ngOnInit() {
@@ -34,7 +37,7 @@ export class PrescipcionComponent implements OnInit {
   public findbrazalete() {
     console.log('Brazalete ingresado: ', this.brazalete);
     if (this.brazalete.length > 0) {
-      this.svratencion.getInfoPacieteByBrazaleteId(this.brazalete).then( (a: AtencionPacientes) => {
+      this.svratencion.getInfoPacieteByBrazaleteId(this.brazalete).then( (a: Ingresos) => {
         this.infoPaciente = a;
         console.log('Inofrmación obtenida: ', this.infoPaciente);
       });

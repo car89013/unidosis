@@ -58,19 +58,19 @@
             Fecha de Ingreso:
           </div>
           <div class="col-md-2">
-            2018-03-20
+            {{ infoPaciente.fecha_ingreso | date}}
           </div>
           <div class="col-md-1 blue-grey-text font-weight-light">
             Sala:
           </div>
           <div class="col md3">
-            SALA 3
+            {{ infoPaciente.asignacion.sala.desc_sala }}
           </div>
           <div class="col-md-1 blue-grey-text font-weight-light">
             Cama:
           </div>
           <div class="col-md-2">
-            CAMA01
+            {{ infoPaciente.asignacion.cama.desc_cama }}
           </div>
         </div>
         <div style="border: 1px solid lightsteelblue; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;
@@ -83,7 +83,7 @@
             <div class="mat-divider"></div>
             <div class="row">
               <div class="col-md-12">
-                <p class="font-weight-light">Lugar en donde aparece el motivo o descripción del ingreso del paciente.</p>
+                <p class="font-weight-light">{{ infoPaciente.motivoIngreso }}</p>
               </div>
             </div>
         </div>

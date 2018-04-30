@@ -16,7 +16,7 @@ import {PacientesService} from './services/pacientes.service';
 import {EnfermerasService} from './services/enfermeras.service';
 import { SalasComponent } from './salas/salas.component';
 import {SalasService} from './services/salas.service';
-import { PrescipcionComponent } from './prescipcion/prescipcion.component';
+import {AtencionPacientesComponent} from './atencionpacientes/atencionpacientes.component';
 import {MatButtonModule, MatTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IngresosService} from './services/ingresos.service';
@@ -27,7 +27,8 @@ const appRouter: Routes = [
   { path: 'medicos', component: MedicosComponent},
   { path: 'enfermeras', component: EnfermerasComponent},
   { path: 'salas', component: SalasComponent},
-  { path: 'prescripcion', component: PrescipcionComponent},
+  { path: 'atencionpacientes', component: AtencionPacientesComponent},
+
 ];
 
 @NgModule({
@@ -37,7 +38,7 @@ const appRouter: Routes = [
     MedicosComponent,
     EnfermerasComponent,
     SalasComponent,
-    PrescipcionComponent
+    AtencionPacientesComponent,
   ],
   imports: [
     BrowserModule,
