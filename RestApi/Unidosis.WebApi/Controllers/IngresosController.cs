@@ -41,6 +41,14 @@ namespace Unidosis.WebApi.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, ingreso);
         }
 
+        public HttpResponseMessage Get(int idSala,bool activos)
+        {
+            List<uni_ingresoDTO> ingresos = ucMovimientos.getIngresosBySala(idSala,activos);
+            if (ingresos == null)
+                return Request.CreateErrorResponse(HttpStatusCode.NotFound, "No se encontro el ingreso");
+            return Request.CreateResponse(HttpStatusCode.OK, ingresos);
+        }
+
         [HttpPost]
         public HttpResponseMessage Create([FromBody]uni_ingresoDTO _Ingreso)
         {

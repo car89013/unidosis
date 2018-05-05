@@ -54,6 +54,26 @@ namespace UnidadControl.Movimientos
             return resultado;
         }
 
+        public List<uni_ingresoDTO> getIngresosBySala(int idSala,bool activos)
+        {
+            List<uni_ingresoDTO> resultado = new List<uni_ingresoDTO>();
+            IQueryable<uni_ingreso> query = null;
+            if (activos)
+            {
+                query = from q in context.uni_ingresos
+                        where q.asignacion.sala.id == idSala && q.fecha_egreso == null
+                        select q;
+            }else
+            {
+                query = from q in context.uni_ingresos
+                        where q.asignacion.sala.id == idSala && q.fecha_egreso != null
+                        select q;
+            }
+            if (query.ToList().Count > 0)
+                resultado = AutoMapper.Mapper.Map<List<uni_ingresoDTO>>(query.ToList());
+            return resultado;
+        }
+
         public uni_ingresoDTO setIngreso(uni_ingresoDTO _ingresoDTO)
         {
             try
