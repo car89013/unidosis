@@ -41,7 +41,7 @@ export class EnfermerasComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.actividad = 0;
+    this.limpiaVariables();
   }
 
   public onGridReady(event: any) {}

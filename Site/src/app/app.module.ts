@@ -20,6 +20,7 @@ import {AtencionPacientesComponent} from './atencionpacientes/atencionpacientes.
 import {MatButtonModule, MatTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IngresosService} from './services/ingresos.service';
+import { IngresosComponent } from './ingresos/ingresos.component';
 
 const appRouter: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'  },
@@ -28,7 +29,7 @@ const appRouter: Routes = [
   { path: 'enfermeras', component: EnfermerasComponent},
   { path: 'salas', component: SalasComponent},
   { path: 'atencionpacientes', component: AtencionPacientesComponent},
-
+  { path: 'ingresos', component: IngresosComponent}
 ];
 
 @NgModule({
@@ -39,6 +40,7 @@ const appRouter: Routes = [
     EnfermerasComponent,
     SalasComponent,
     AtencionPacientesComponent,
+    IngresosComponent,
   ],
   imports: [
     BrowserModule,

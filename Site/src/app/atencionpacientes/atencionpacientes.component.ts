@@ -32,6 +32,13 @@ export class AtencionPacientesComponent implements OnInit {
   }
 
   ngOnInit() {
+    if ((this.svratencion.numBrazalete  != null) && (this.svratencion.numBrazalete != undefined)) {
+      this.brazalete = this.svratencion.numBrazalete;
+
+      this.findbrazalete();
+    } else {
+      this.brazalete = '';
+    }
   }
 
   public findbrazalete() {
