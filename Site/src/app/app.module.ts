@@ -20,6 +20,7 @@ import {AtencionPacientesComponent} from './atencionpacientes/atencionpacientes.
 import {MatButtonModule, MatTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IngresosService} from './services/ingresos.service';
+import {ConfigService} from './services/config.service';
 
 const appRouter: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'  },
@@ -53,7 +54,7 @@ const appRouter: Routes = [
     MatButtonModule,
   ],
   providers: [MedicosService, PacientesService, EnfermerasService, SalasService,
-  IngresosService],
+  IngresosService, ConfigService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
