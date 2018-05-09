@@ -94,7 +94,7 @@
             <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
             Nota
           </button>
-          <button mat-button class="font-weight-light">
+          <button mat-button class="font-weight-light" (click)="showPrescripcionDialgo()">
             <i class="fa fa-edit" aria-hidden="true"></i>
             Nva. Presc.
           </button>
@@ -102,7 +102,7 @@
             <i class="fa fa-exchange" aria-hidden="true"></i>
             Cambiar Presc.
           </button>
-          <button mat-button class="font-weight-light">
+          <button mat-button class="font-weight-light" (click)="showAplicacionDialgo()">
             <i class="fas fa-pills"></i>
             Aplicacion Med.
           </button>
@@ -144,3 +144,88 @@
   </div>
 </div>
 
+
+
+<!--Modal: Contact form-->
+<div mdbModal #form="mdb-modal" class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <!--Content-->
+    <div class="modal-content">
+
+      <!--Header-->
+      <div class="modal-header light-blue darken-3 white-text">
+        <h4 class="title"><i class="fas fa-pills mr-2"></i> Prescripción </h4>
+        <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="form.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <!--Body-->
+      <div class="modal-body mb-0">
+        <div class="row align-bottom">
+          <div class="col-md-1">
+            <div class="md-form">
+              <input type="text" id="grupo" class="form-control" mdbActive maxlength="3">
+              <label for="grupo">Gpo:</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="md-form">
+              <input type="text" id="gen" class="form-control" mdbActive maxlength="3">
+              <label for="gen">Gen:</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="md-form">
+              <input type="text" id="generico" class="form-control" mdbActive maxlength="4">
+              <label for="generico">Esp:</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="md-form">
+              <input type="text" id="Dif" class="form-control" mdbActive maxlength="2">
+              <label for="dif">Dif:</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <span>Paracetamol comprimido de 20mg.</span>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="md-form">
+              <textarea type="text" id="indicacion" class="form-control" mdbActive ></textarea>
+              <label for="indicacion">Indicaciones:</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <div class="md-form">
+              <input type="text" id="cantidad" class="form-control" mdbActive >
+              <label for="cantidad">Cant:</label>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="md-form">
+              <mat-select placeholder="Frec." name="frec">
+                <mat-option value="0">c/ 4 hrs.</mat-option>
+                <mat-option value="1">c/ 6 hrs.</mat-option>
+                <mat-option value="2">c/ 8 hrs.</mat-option>
+                <mat-option value="3">c/ 12 hrs.</mat-option>
+                <mat-option value="4">c/ 24 hrs.</mat-option>
+              </mat-select>
+            </div>
+            Hrs.
+          </div>
+        </div>
+        <div class="text-center mt-1-half">
+          <button class="btn btn-info mb-2 waves-light" mdbWavesEffect>Send <i class="fa fa-send ml-1"></i></button>
+        </div>
+
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: Contact form-->

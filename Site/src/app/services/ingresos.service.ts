@@ -6,6 +6,7 @@ import {ConfigService} from './config.service';
 export class IngresosService {
 
   public numBrazalete: string;
+  public numPrescripcion: string;
 
   headers = new HttpHeaders({'Content-Type' : 'application/json'});
 

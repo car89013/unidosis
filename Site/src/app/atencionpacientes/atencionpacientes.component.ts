@@ -7,6 +7,9 @@ import {Asignacioncamas} from '../models/asignacioncamas';
 import {Ingresos} from '../models/ingresos';
 import {Salas} from '../models/salas';
 import {Camas} from '../models/camas';
+import {MatDialog} from '@angular/material';
+import {PrescripcionComponent} from './prescripcion/prescripcion.component';
+import {AplicacionComponent} from './aplicacion/aplicacion.component';
 
 @Component({
   selector: 'app-prescipcion',
@@ -20,7 +23,7 @@ export class AtencionPacientesComponent implements OnInit {
   brazalete: string;
   infoPaciente: Ingresos;
 
-  constructor(private svratencion: IngresosService) {
+  constructor(public presDialog: MatDialog, private svratencion: IngresosService) {
 
     /* Inicializando infomraicón del paciente */
     this.infoPaciente = new Ingresos();
@@ -49,6 +52,15 @@ export class AtencionPacientesComponent implements OnInit {
         console.log('Inofrmación obtenida: ', this.infoPaciente);
       });
     }
+  }
+
+  public showPrescripcionDialgo() {
+    this.presDialog.open(PrescripcionComponent);
+  }
+
+  public showAplicacionDialgo() {
+    this.svratencion.numBrazalete = this.brazalete;
+    this.presDialog.open(AplicacionComponent);
   }
 
 }

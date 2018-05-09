@@ -17,11 +17,14 @@ import {EnfermerasService} from './services/enfermeras.service';
 import { SalasComponent } from './salas/salas.component';
 import {SalasService} from './services/salas.service';
 import {AtencionPacientesComponent} from './atencionpacientes/atencionpacientes.component';
-import {MatButtonModule, MatTabsModule} from '@angular/material';
+import {MatButtonModule, MatDialogModule, MatInputModule, MatTabsModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {IngresosService} from './services/ingresos.service';
-import { IngresosComponent } from './ingresos/ingresos.component';
+import {IngresosComponent} from './ingresos/ingresos.component';
 import {ConfigService} from './services/config.service';
+import {MatSelectModule} from '@angular/material/select';
+import { PrescripcionComponent } from './atencionpacientes/prescripcion/prescripcion.component';
+import { AplicacionComponent } from './atencionpacientes/aplicacion/aplicacion.component';
 
 const appRouter: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full'  },
@@ -42,6 +45,8 @@ const appRouter: Routes = [
     SalasComponent,
     AtencionPacientesComponent,
     IngresosComponent,
+    PrescripcionComponent,
+    AplicacionComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,12 @@ const appRouter: Routes = [
     BrowserAnimationsModule,
     MatTabsModule,
     MatButtonModule,
+    MatSelectModule,
+    MatDialogModule,
+    MatInputModule,
+  ],
+  entryComponents: [
+    PrescripcionComponent, AplicacionComponent,
   ],
   providers: [MedicosService, PacientesService, EnfermerasService, SalasService,
   IngresosService, ConfigService],
