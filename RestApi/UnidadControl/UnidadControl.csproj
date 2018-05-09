@@ -60,7 +60,9 @@
     <Compile Include="Catalogos\DTOs\uni_salaDTO.cs" />
     <Compile Include="Catalogos\DTOs\uni_tratanteDTO.cs" />
     <Compile Include="Catalogos\UCCatalogos.cs" />
+    <Compile Include="Movimientos\DTOs\uni_bitacoraDTO.cs" />
     <Compile Include="Movimientos\DTOs\uni_ingresoDTO.cs" />
+    <Compile Include="Movimientos\UCMovimientos.cs" />
     <Compile Include="UCBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

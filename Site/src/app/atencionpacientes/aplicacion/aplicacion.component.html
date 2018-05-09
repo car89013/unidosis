@@ -1,0 +1,53 @@
+<div class="modal-header light-blue darken-3 white-text">
+  <h4 class="title">
+    <i class="fas fa-pills mr-2"></i>
+    Aplicación Medicamentos
+  </h4>
+  <!--<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="form.hide()">
+    <span aria-hidden="true">×</span>
+  </button>-->
+</div>
+<!--Body-->
+<form [formGroup]="formGroup">
+  <div class="modal-body mb-0">
+      <div class="row align-bottom">
+        <div class="col-md-4">
+          <div class="md-form">
+            <input formControlName="brazalete" type="text" id="brazalete" class="form-control" mdbActive maxlength="10" (blur)="validaCodigo()">
+            <label for="brazalete">Brazalete:</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="md-form">
+            <input formControlName="codigo" type="text" id="codigo" class="form-control" mdbActive maxlength="10" (blur)="validaCodigo()">
+            <label for="codigo">Codigo Bolsa:</label>
+          </div>
+        </div>
+        <div class="col-md-4" style="text-align: center;">
+          <h1 *ngIf="correlacionado" class="green-text"><i class="fa fa-check rotateIn"></i></h1>
+          <h1 *ngIf="!correlacionado" class="red-text"><i class="fa fa-close rotateIn"></i></h1>
+        </div>
+      </div>
+      <div class="row align-bottom">
+        <div class="col-md-12">
+          <div class="md-form">
+            <textarea formControlName="observaciones" type="text" id="obs" class="form-control" mdbActive  rows="5"></textarea>
+            <label for="obs">Observaciones:</label>
+          </div>
+        </div>
+      </div>
+  </div>
+</form>
+<div class="text-center mt-1-half">
+  <button class="btn btn-outline-default btn-sm" type="button" (click)="acteptarButton()" [disabled]="!correlacionado" mdbRippleRadius>
+    <i class="fa fa-address-card"></i>
+    Aceptar
+  </button>
+  <button class="btn btn-outline-black btn-sm" type="button" (click)="cancelarButton()" mdbRippleRadius>
+    <i class="fa fa-close"></i>
+    Cancelar
+  </button>
+</div>
+<!--
+<pre> {{ formGroup.value | json }} </pre>
+-->

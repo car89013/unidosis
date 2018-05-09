@@ -1,0 +1,102 @@
+<div class="modal-header light-blue darken-3 white-text">
+  <h4 class="title">
+    <i class="fa fa-edit mr-2"></i>
+    Prescripción
+  </h4>
+  <!--<button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close" (click)="form.hide()">
+    <span aria-hidden="true">×</span>
+  </button>-->
+</div>
+<!--Body-->
+<form [formGroup]="prescripcionFormGroup">
+  <div class="modal-body mb-0">
+    <div class="row align-bottom">
+      <div class="col-md-1">
+        <div class="md-form">
+          <input formControlName="gpo" type="text" id="grupo" class="form-control" mdbActive maxlength="3">
+          <label for="grupo">Gpo:</label>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="md-form">
+          <input formControlName="gen" type="text" id="gen" class="form-control" mdbActive maxlength="3">
+          <label for="gen">Gen:</label>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="md-form">
+          <input formControlName="esp" type="text" id="esp" class="form-control" mdbActive maxlength="4">
+          <label for="esp">Esp:</label>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="md-form">
+          <input formControlName="dif" type="text" id="dif" class="form-control" mdbActive maxlength="2">
+          <label for="dif">Dif:</label>
+        </div>
+      </div>
+      <div class="col-md-7" style="text-align: right;" *ngIf="numPrescrip">
+        <h5><strong>No. Presc:</strong> {{ numPrescrip }} </h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <span>Paracetamol comprimido de 20mg.</span>
+      </div>
+    </div>
+    <hr>
+    <table>
+      <tr style="width: 100%;">
+        <td style="width: 50%;">
+          <mat-form-field style="width: 100%;">
+            <textarea formControlName="nota" placeholder="Nota" matInput rows="2"></textarea>
+          </mat-form-field>
+        </td>
+        <td style="width: 20%;">
+          <mat-form-field style="width: 100%;">
+          <input formControlName="cant" matInput placeholder="Cant">
+        </mat-form-field></td>
+        <td style="width: 20%;">
+          <mat-form-field style="width: 100%;">
+            <mat-select formControlName="frec" placeholder="Frecuencia">
+              <mat-option value="0">c/ 4 hrs.</mat-option>
+              <mat-option value="1">c/ 6 hrs.</mat-option>
+              <mat-option value="2">c/ 8 hrs.</mat-option>
+              <mat-option value="3">c/ 12 hrs.</mat-option>
+              <mat-option value="4">c/ 24 hrs.</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td style="width: 10%;">
+          <div class="text-center mt-1-half">
+            <button class="btn btn-info mb-2 waves-light" mdbWavesEffect><i class="fa fa-plus-circle ml-1"></i></button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+<!--<pre> {{ prescripcionFormGroup.value | json }}</pre>-->
+<div style="width: 100%;">
+  <ag-grid-angular #agGrid style="width: 100%; height: 250px;" class="ag-theme-blue"
+                   id="detllaePreGrid"
+                   rowHeight="18px"
+                   [gridOptions]="detllaePreGrid"
+                   [autoGroupColumnDef]="detllaePreGrid.columnDefs"
+                   [rowData]="detllaePreGrid.rowData"
+                   (selectionChanged)="onMedicosSelected($event)"
+                   (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
+</div>
+
+<div class="text-center mt-1-half">
+  <button class="btn btn-outline-default btn-sm" type="button" (click)="acteptarButton()" mdbRippleRadius>
+    <i class="fa fa-address-card"></i>
+    Aceptar
+  </button>
+  <button class="btn btn-outline-black btn-sm" type="button" (click)="cancelarButton()" mdbRippleRadius>
+    <i class="fa fa-close"></i>
+    Cancelar
+  </button>
+</div>

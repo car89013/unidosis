@@ -12,6 +12,11 @@ namespace ModeloEntidad.Entidades.Catalogos
     [Table("uni_asignacion_camas")]
     public class uni_asignacion_cama
     {
+        public uni_asignacion_cama()
+        {
+            this.ingresos = new List<uni_ingreso>();
+        }
+
         [Key(), Column(Order = 1)]
         public int id { get; set; }
 

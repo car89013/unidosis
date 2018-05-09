@@ -15,6 +15,7 @@ namespace ModeloEntidad.Entidades.Movimientos
         public uni_ingreso()
         {
             this.prescripciones = new List<uni_prescripcion_m>();
+            this.bitacora = new List<uni_bitacora>();
         }
 
         /// <summary>
@@ -43,8 +44,15 @@ namespace ModeloEntidad.Entidades.Movimientos
 
         public DateTime fecha_ingreso { get; set; }
 
-        public DateTime fecha_egreso { get; set; }
+        public DateTime? fecha_egreso { get; set; }
 
         virtual public List<uni_prescripcion_m> prescripciones { get; set; }
+
+        virtual public List<uni_bitacora> bitacora { get; set; }
+
+        public string motivoIngreso { get; set; }
+
+        virtual public uni_asignacion_cama asignacion { get; set; }
+
     }
 }
